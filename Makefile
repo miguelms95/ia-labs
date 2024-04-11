@@ -13,11 +13,10 @@ setup:
 	pip install 'transformers[torch]'
 	pip install 'transformers[flax]'
 	pip install 'transformers[tf-cpu]'
-	
 	@echo "Installed! ✅"
 
 run:
-	@python script.py
+	@.env/bin/python script-model-base.py
 
 sample:
 	python -c "from transformers import pipeline; print(pipeline('sentiment-analysis')('we love you'))"
