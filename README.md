@@ -26,3 +26,8 @@ Install all software dependencies:
 ```bash
 make setup
 ```
+
+## Sample run
+```bash
+python -c "from transformers import pipeline; print(pipeline('sentiment-analysis')('we love you'))"
+```

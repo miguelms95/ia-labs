@@ -15,7 +15,12 @@ setup:
 	pip install 'transformers[tf-cpu]'
 	
 	@echo "Installed! ✅"
+
 run:
 	@python script.py
+
+sample:
+	python -c "from transformers import pipeline; print(pipeline('sentiment-analysis')('we love you'))"
+
 
 .PHONY: activate
